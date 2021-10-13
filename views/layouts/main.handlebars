@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> The Tech Blog!</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class=" mainContainer flex-column min-100-vh ">
+    <header class="display-column justify-space-between align-center p-2">
+
+      <div class="navHeader">
+      <nav class = "navbar" >
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <ul>
+         <li class="li-inline nav-item"><a href="/">Home</a></li>
+         <li class="li-inline nav-item"><a class="nav-link active user-profile" data-currentuser="{{comment_creator}}" href="/profile">Dashboard</a></li>
+         <li class="li-inline nav-item"><a href="" id="logout">Logout</a></li>
+        </ul>
+      
+      
+       {{else}}
+     
+      
+        <ui>
+         <li class="li-inline nav-item"><a href="/">Home</a></li>
+         <li class="li-inline nav-item"><a class="nav-link active user-profile" data-currentuser="{{comment_creator}}" href="/">Dashboard</a></li>
+         <li class="li-inline nav-item"><a href="/login">Login</a></li>
+        </ui>
+        
+        {{/if}}
+      </nav>
+      </div>
+      
+
+      <h1 class="firstTitle">
+        <span role="img" aria-label="copy and pen">📝</span>
+        <a href="/">The Tech Blog</a>
+      </h1>
+      
+    </header>
+
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+
+   <footer class="footer flex-row justify-center align-end">
+      &copy; THE TECH BLOG
+    </footer>
+
+  </div>
+
+   
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
