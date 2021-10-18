@@ -17,19 +17,19 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
 ## Screenshots:
   ### Home page
- ![](./assets/homePage.png) 
+ ![](./Assets/homePage.png) 
 
  ### Dashboard page
- ![](./assets/dashboardPage.png) 
+ ![](./Assets/dashboardPage.png) 
 
  ### Login/Logout page
- ![](./assets/loginPage.png) 
+ ![](./Assets/loginPage.png) 
 
  ### Comment page
- ![](./assets/commentPage.png) 
+ ![](./Assets/commentPage.png) 
 
  ### Edit page
- ![](./assets/editPage.png) 
+ ![](./Assets/editPage.png) 
 
 
 
