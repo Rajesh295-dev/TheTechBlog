@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { Router } = require('express');
 const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
@@ -35,6 +36,28 @@ router.delete('/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+router.put('/:id', withAuth, (req, res) => {
+  Post.update({
+    title: req.body.title,
+    description: req.body.description
+  }, 
+  {
+    where: {
+      id: req.params.id
+    }
+  }
+  ).then(postData => {
+    if (!postData) {
+      res.status(404).json({ message: "No post found" })
+      return;
+    }
+    res.json(postData)
+
+  })
+    .catch(err => {
+      res.status(500).json(err);
+    })
+})
 
 //module exports
 module.exports = router;

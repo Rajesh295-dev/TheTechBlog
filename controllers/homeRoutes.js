@@ -34,6 +34,34 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/edit/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name']
+        },
+
+        { 
+          model: Comment, as: "post_comments",
+          include: { model: User, as: "comment_creator", attributes: ['name']}
+        }
+      ]
+    });
+
+    //Serialize data so the template can read it
+    const post = postData.get({ plain: true });
+    console.log({ ...post, logged_in: req.session.logged_in })
+
+    res.render('update-post', {
+      post,
+      comment_creator: req.session.user_id, logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 router.get('/posts/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {

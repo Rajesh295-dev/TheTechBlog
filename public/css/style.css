@@ -47,12 +47,11 @@
   
   width: 100%;
   background-color: var(--dark);
-
-}
-
-.postTitle p{
   color: #1b89bc;
+
 }
+
+
 
 
 .mainContainer{
@@ -65,52 +64,98 @@
   margin-top: 500px;
 }
 
+
 .col-md-6{
   border: solid 3px;
-  border-color: #260F0F;
+  padding: 6px;
+  border-color: #260F0F; 
 }
 
 .col-md-6 h2 {
- 
   background-color: #260F0F;
   color: #1b89bc;
   width: 100%;
   margin-right: -50px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+#blogs{
+  border:  #260F0F solid;
+  margin-bottom: 20px;
+  
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
+#blogs p{
+  
+ margin-left:50px;   
+  
+}
+
+
+.commentBox{
+  border:#260F0F solid;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  
+  
+}
+
+
+.commentBox h5{
+  background-color:#260F0F;
   color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+  border:0px  !important;
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+.new-comment{
+  margin-left: 6px;
+  margin-bottom: 4px;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+
+.post-list{
+  margin-top: 20px;
+  
+}
+
+#comment{
+  
+  border:none;
+}
+.card-body{
+
+  background-color:white;
+  padding-block-start: 20px;
+  width: 100%;
+  border:solid #260F0F;
+  
+}
+
+
+.form-input {
+  background-color: #260F0F;
+  
+}
+
+.edit-post-form{
+  border: #260F0F solid 3px ;
+ margin-top: 0px;
+}
+
+
+.my-3 {
+  padding-left: 6px;
+}
+
+.btn-primary{
+  margin-top: 6px;
+}
+
+@media screen and (min-width: 640px) {
+  .post-list{
+    margin-top: 1px;
+   
+  }
+
+  
+  
 }

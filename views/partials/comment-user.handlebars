@@ -1,7 +1,8 @@
 {{#each postData.post_comments}}
-  <div data-userid="{{userid}}" id="comment" class=" my-3 card" style="width: 50rem;">
+ 
+  <div data-userid="{{userid}}" id="comment" class=" flex-row my-3 card" style="width: 50rem;">
     <div class="card-body">
-      <h6 class="card-subtitle mb-2 text-muted">{{comment_creator.username}} on {{formatTime createdAt}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">{{comment_creator.username}} on {{formatTime createdAt}}</h6> 
       <p class="card-text input-content-{{id}}">{{content}}</p>
 
       {{#if (isEqual userId ../userId)}}
@@ -11,4 +12,6 @@
 
     </div>
   </div>
+  
+  
 {{/each}}
