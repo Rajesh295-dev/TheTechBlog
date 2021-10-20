@@ -12,7 +12,7 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 ```
 
 ## Deployed Heroku Link:
- ### [MVC Tech Blog!](https://pure-garden-35985.herokuapp.com)
+ ### [MVC Tech Blog!](https://safe-waters-62977.herokuapp.com)
 
 
 ## Screenshots:
@@ -47,8 +47,8 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
 
 ## Links :
-* Link for the deployed application on heroku [The Tech Blog!](https://pure-garden-35985.herokuapp.com)
-* Link for the Github repository [Host by Github](https://github.com/Rajesh295-dev/note-Taker)
+* Link for the deployed application on heroku [The Tech Blog!](https://safe-waters-62977.herokuapp.com)
+* Link for the Github repository [Host by Github](https://github.com/Rajesh295-dev/TheTechBlog)
 
 ## Contributor:
 
